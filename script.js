@@ -15,7 +15,7 @@ function computerPlay() {
 while (true) {
 
     //Prompting the user for his choice of playing the game or not 
-    let play = prompt("Do you want to play a game?(yes/no): ").toLowerCase();
+    let play = prompt("Do you want to play a game?(yes/no): ").toLowerCase() || '';
 
     if (play === "yes") {
         function playRound(playerSelection, computerSelection) {
