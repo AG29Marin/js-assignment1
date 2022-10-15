@@ -1,6 +1,6 @@
 // Keeping the score
-let player_wins = 0;
-let computer_wins = 0;
+let playerWins = 0;
+let computerWins = 0;
 
 // Options into an array
 let options = ["rock", "paper", "scissors"];
@@ -27,17 +27,17 @@ while (true) {
             // Conditionals for keeping the score
             if (playerSelection === options[0] && computerSelection === options[2]) {
                 console.log(`The computer selected ${computerSelection}. You win!`);
-                player_wins += 1;
+                playerWins += 1;
             }
 
             else if (playerSelection === options[1] && computerSelection === options[0]) {
                 console.log(`The computer selected ${computerSelection}. You win!`);
-                player_wins += 1;
+                playerWins += 1;
             }
 
             else if (playerSelection === options[2] && computerSelection === options[1]) {
                 console.log(`The computer selected ${computerSelection}. You win!`);
-                player_wins += 1;
+                playerWins += 1;
             }
 
             else if (playerSelection === computerSelection) {
@@ -46,7 +46,7 @@ while (true) {
 
             else {
                 console.log(`The computer selected ${computerSelection}. You lose!`);
-                computer_wins += 1;
+                computerWins += 1;
             }
             
         }
@@ -57,7 +57,7 @@ while (true) {
                 playRound();
             }
 
-            console.log(`Out of 5 rounds you won: ${player_wins}`);
+            console.log(`Out of 5 rounds you won: ${playerWins}`);
 
         }
 
