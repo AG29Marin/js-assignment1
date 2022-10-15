@@ -1,6 +1,5 @@
 // Keeping the score
-let playerWins = 0;
-let computerWins = 0;
+let playerWins = 0, computerWins = 0;
 
 // Options into an array
 const options = ["rock", "paper", "scissors"];
@@ -19,6 +18,7 @@ function game() {
     console.log(`Out of 5 rounds you won: ${playerWins}`);
 }
 
+// Function for playing one round
 function playRound(playerSelection, computerSelection) {
     // Prompting the user for selecting an option
     playerSelection = prompt("Type Rock/Paper/Scissors: ").toLowerCase();
@@ -26,7 +26,7 @@ function playRound(playerSelection, computerSelection) {
 
     // Checking if the input is rock, paper or scissors
     if(!options.includes(playerSelection)) {
-        alert("Please enter the valid input!");
+        console.log("Please enter the valid input!");
         return playRound();
     }
 
@@ -44,7 +44,7 @@ function playRound(playerSelection, computerSelection) {
         playerWins += 1;
     }
     else if (playerSelection === computerSelection) {
-        console.log(`The computer selected ${computerSelection}. It's a tie!`);
+        console.log(`The computer also selected ${computerSelection}. It's a tie!`);
     }
     else {
         console.log(`The computer selected ${computerSelection}. You lose!`);
